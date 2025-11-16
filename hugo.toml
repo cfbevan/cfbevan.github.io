@@ -72,7 +72,7 @@ dateFormat = "2006-01-02"
 [languages]
 [languages.en]
 languageName = "English"
-title = "terminal"
+title = "cfbevan.github.io"
 
 [languages.en.params]
 subtitle = "A simple, retro theme for Hugo"
@@ -99,6 +99,6 @@ identifier = "projects"
 name = "Projects"
 url = "/projects"
 [[languages.en.menu.main]]
-identifier = "blog"
-name = "Blog"
+identifier = "thoughts"
+name = "Random Thoughts"
 url = "/posts"

@@ -1,0 +1,6 @@
+[Hh]ugo
+asdf
+gohugo
+mastodon_link
+my_site
+vm

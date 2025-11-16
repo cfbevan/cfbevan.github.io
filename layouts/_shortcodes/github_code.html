@@ -1,0 +1,26 @@
+{{ $url := .Get "url"}}
+{{ $id := delimit (shuffle (seq 1 9)) "" }}
+{{ $open := .Get "open" }}
+{{ $lang := .Get "language" }}
+{{ $title := .Get "title" | markdownify}}
+{{ $opts := .Get "opts" }}
+
+{{ with resources.GetRemote $url }}
+    {{if $lang }}
+        <details class="collapsable-code" {{ if eq $open "true" -}} open {{- end }}>
+            <summary title="Click to interact">
+                <span class="collapsable-code__title">{{ $title }}</span>
+            </summary>
+            {{ $trInner := trim .Content "\n" }}
+            {{- transform.Highlight $trInner $lang $opts -}}
+        </details>
+    {{ else }}
+        {{ errorf "If you want to use the \"collapsable code\" shortcode, you need to pass a mandatory \"language\" param. The issue occured in %q (%q)" .Page.File .Page.Permalink }}
+    {{ end }}
+{{ else }}
+    <div class="code-block">
+        <p style="text-align: center; color: var(--secondary); margin: 0;">
+            [Source not online at time of site build.]
+        </p>
+    </div>
+{{ end }}
