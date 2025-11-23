@@ -1,4 +1,6 @@
+[Dd]ev
 [Hh]ugo
+Ansible
 asdf
 gohugo
 mastodon_link

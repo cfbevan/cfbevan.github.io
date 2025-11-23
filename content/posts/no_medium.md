@@ -4,6 +4,7 @@ description = "Hosting your own site."
 date = "2025-11-16T13:34:53-05:00"
 dateFormat = "2006-01-02"
 tags = ["Mastodon", "Medium"]
+Toc = false
 +++
 
 Came across this post today:
