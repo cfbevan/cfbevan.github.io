@@ -1,10 +1,8 @@
 # https://just.systems
 
-setup:
-    pre-commit install --install-hooks
-
 lint:
-    pre-commit run -a --hook-stage manual
+    vale sync
+    vale --config=.vale.ini --minAlertLevel=error ./content/**/*.md
 
 serve:
     hugo server -D -w

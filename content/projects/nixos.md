@@ -5,11 +5,11 @@ date = "2025-11-30"
 tags = ["NixOS"]
 +++
 
-## It Starts...
+## It Starts…
 
 {{< mastodon instance="infosec.exchange" id="115619657378081387" >}}
 
-Yes, I got a new Lenovo ThinkPad X1 Carbon 13 Gen on sale for black Friday. I have had ThinkPads off and on since high school when I first started getting in to using Linux. I switched to Mac about five years ago when the M1s came on the the market. I have been super happy with the switch. The connected ecosystem, battery life, and just works was a fresh change from the churn and constant fixing I was doing with Linux. Recently with the addition of AI to everything and the revelations of corporate tracking has made me nostalgic for the control I had over what was running on my laptop back when I ran Linux.
+Yes, I got a new Lenovo ThinkPad X1 Carbon 13 Gen on sale for black Friday. I have had ThinkPads off and on since high school when I first started getting in to using Linux. I switched to Mac about five years ago when the M1s came on the market. I have been super happy with the switch. The connected ecosystem, battery life, and just works was a fresh change from the churn and constant fixing I was doing with Linux. Recently with the addition of AI to everything and the revelations of corporate tracking has made me nostalgic for the control I had over what was running on my laptop back when I ran Linux.
 
 I decided to give NixOS a try this time. I started my Linux journey on Debian back in the day and tended to stay with it for my personal computer use. Debian > Ubuntu > Mint > Manjaro. For work I have mostly been on RedHat and copy cats distributions when RHEL stopped really having LTS versions. NixOS is nothing like anything I have used before, but there is no time to let that scare me now.
 
@@ -39,7 +39,7 @@ I have a good system for Mac to install all of this using `Brew` and a few scrip
 
 ## Learning
 
-I learn best by listening and then getting some hands on time.Yes, traditional school really worked for me. I found a YouTube user with a shared configuration repository that I could use as examples and to follow along in the videos.
+I learn best by listening and then getting some hands on time. Yes, traditional school really worked for me. I found a YouTube user with a shared configuration repository that I could use as examples and to follow along in the videos.
 
 - <https://www.youtube.com/watch?v=6WLaNIlDW0M&list=PL_WcXIXdDWWpuypAEKzZF2b5PijTluxRG>
 - <https://gitlab.com/librephoenix/nixos-config>
@@ -56,9 +56,9 @@ This is where all the fun starts. The first thing I did was edit the `/etc/nixos
 
 > Failure #2: Can't rebuild without Internet. How do I get Internet?
 
-I am a bit embarrassed about how long it took me to connect my wireless via a command line only interface. I will save you from teh hour+ I spent going down a rabbit hole on `wpa_cli` and `wpa_supplicant` trying to figure out how to simply connect and getting error after error because `wpa_supplicant` was already running and I could not edit `wlp0s20f3` because the interface was already in use. What I really needed to do was use `nmtui` (network manager) to config the already running `wpa_supplicant` to connect to my wifi.
+I am a bit embarrassed about how long it took me to connect my wireless via a command line only interface. I will save you from the hour+ I spent going down a rabbit hole on `wpa_cli` and `wpa_supplicant` trying to figure out how to simply connect and getting error after error because `wpa_supplicant` was already running and I could not edit `wlp0s20f3` because the interface was already in use. What I really needed to do was use `nmtui` (network manager) to config the already running `wpa_supplicant` to connect to my wifi.
 
-After getting internet connected and calling `sudo nixos-rebuild` again I was able to get my system to update as expected. I spent the rest of the day writing all my configuration files by hand using the above GitLab repository as examples. I started by just focusing on getting a graphical interface with FireFox installed. I transferred everything to Nix Flakes, got Git installed and tracking my changes, and set up Hyprland with a CacheOS kernel. There were a bunch of places I had to stop and clear up my poor typing. Missing `;` or `:` were the biggest issue I had. Compiling the kernel took over an hour by itself. At the end of the day though I had a working GUI on my system and I went to bed happy with a sense of accomplishment.
+After getting internet connected and calling `sudo nixos-rebuild` again I was able to get my system to update as expected. I spent the rest of the day writing all my configuration files by hand using the above GitLab repository as examples. I started by just focusing on getting a graphical interface with FireFox installed. I transferred everything to Nix Flakes, got Git installed and tracking my changes, and set up Hyprland with a CacheOS kernel. There were a bunch of places I had to stop and clear up my poor typing. Missing `;` or `:` were the biggest issue I had. Compiling the kernel took over an hour by itself. By the time I stopped working though I had a working GUI on my system and I went to bed happy with a sense of accomplishment.
 
 ## Oops
 
@@ -74,12 +74,12 @@ I popped the USB back in and booted back to the installer. This time I had to se
 
 ## Where I am Now
 
-I have a "working" laptop. There are a few issues that are still outstanding:
+I have a "working" laptop. Issues that are still outstanding:
 
 - Bitwarden can't auto start and unlock using the keychain.
 - Fingerprint reading in Hyprlock requires hitting enter first (known issue).
 - Still need to learn Hyprland keybindings. I keep finding myself trying to use Mac keybindings for things like copy and paste as well.
-- There are random freezes in the UI and CLI. This started since I first installed NixOS, I am not sure if this is a Linux issue or something wrong with the laptop.
+- Some random freezes in the UI and CLI. This started since I first installed NixOS, I am not sure if this is a Linux issue or something wrong with the laptop.
 - The startup time after adding LUX increased to an unreasonable time. It went from starting in seconds to taking two minutes to start and even the `nixos-rebuild` command is taking a long time to run.
 - I am unable to turn off the mouse tap to click.
 

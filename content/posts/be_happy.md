@@ -7,7 +7,7 @@ tags = ["yapping"]
 Toc = false
 +++
 
-It seems like a tired cliche, do what makes you happy. In America having hobbies that make you happy is
+It seems like a tired cliché, do what makes you happy. In America having hobbies that make you happy is
 almost seen as a weakness. To the point that it is a
 [running joke](https://youtube.com/shorts/WbehP3ljZoM?si=-HZNuqPXLwlOpA5X). I just recently realized how
 important it is that you actually do something that makes you happy.

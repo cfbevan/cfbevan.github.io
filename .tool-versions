@@ -1,4 +1,3 @@
-hugo-extended        extended_0.152.2
-pre-commit    latest
-just          latest
 hugo-extended latest
+just          latest
+vale          latest
