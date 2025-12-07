@@ -90,3 +90,7 @@ This was about two full days of work to set up and I am not 100% there. I have l
 I plan on working on the NixOS problems for a bit more to see if I can fix the parts that bother me. I need to balance the time fixing my system with the time doing things I really want to do. If I am unable to easily fix the above issues I will consider switching to a better supported Debian distribution. While the one command rebuild is really nice, I am not sure it is worth the pain for how few applications I really use.
 
 I have also noticed that 50% of my battery is used with just `vscode` and `FireFox` running. Neither taking more than 10% CPU at any time. The M1 battery life is still better than that even though it is five year old at this point. I will likely get a new M6 MacBook when they come out if they finally add the OLED screens. I will end up using this laptop for smaller edits and virtualization testing. As a programmer it is nice to have both an ARM and Intel chip on hand for testing.
+
+## Update 2025-12-07
+
+I have abandoned Nix for a base Debian + Gnome. the number of issues I was having with NixOS even just opening a file browser. I also was unable to run pre-built linux binaries that did not exist on Nix repositories due to the base file system being different than other distributions. There were just too many issues. I am wondering if there is something wrong with my hard drive. changing directories, saving, listing all seem to lag.
